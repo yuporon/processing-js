@@ -1,7 +1,12 @@
+var yPos = 0;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  frameRate(30);
 }
-
 function draw() {
-  ellipse(100, 100, 80, 50);
+  background(204);
+  yPos = yPos - 1;
+  if (yPos < 0) {
+    yPos = height;
+  }
+  line(0, yPos, width, yPos);
 }
